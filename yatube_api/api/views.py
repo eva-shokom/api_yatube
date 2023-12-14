@@ -40,7 +40,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    permission_classes = [permissions.AllowAny, ]
+    permission_classes = [permissions.AllowAny]
 
 
 class FollowViewSet(CreateListMixin):
@@ -50,7 +50,7 @@ class FollowViewSet(CreateListMixin):
     search_fields = ('following__username',)
 
     def get_queryset(self):
-        user = get_object_or_404(User, username=self.request.user)
+        user = self.request.user
         return user.followed.all()
 
     def perform_create(self, serializer):
