@@ -51,7 +51,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-4. Перейти в папку api_yamdb
+4. Перейти в папку yatube_api
   
 ```bash
 cd yatube_api
