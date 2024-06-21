@@ -57,7 +57,7 @@ pip install -r requirements.txt
 cd yatube_api
 ```
 
-5. Выполнить миграции и заполнить базу данных из файлов csv
+5. Выполнить миграции
 
 ```bash
 python manage.py migrate
